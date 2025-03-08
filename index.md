@@ -55,6 +55,9 @@ achieving better performance with lower complexity (c).
         <img src="images/HSC_demo.gif" alt="HSC demo" style="width: 100%;">
     </figure>
 </div>
+<p align="justify">
+<b>Figure 4:</b> Demo of the proposed Heterogeneous Semantics Calibrating. We leverage heterogeneous scene text as the calibration signal to align sequences with different time-scales. The nearest semantic match follows the highest similarity score between the element in the first sequence and each element in the second sequence.
+</p>
 
 <!-- <div style="display: flex; justify-content: space-between;">
     <figure>
@@ -69,14 +72,14 @@ achieving better performance with lower complexity (c).
 ## [5/7] Text→Video Retrieval Results (1/2)
 ![Text→Video Retrieval (1/2)](images/t2v_2.png)
 <p align="justify">
-<b>Figure 4:</b> Visualization of retrieval results comparing our method (left) with the model without OCR information (right). Sim indicates the overall similarity
+<b>Figure 5:</b> Visualization of retrieval results comparing our method (left) with the model without OCR information (right). Sim indicates the overall similarity
 score, calculated as the average of text-OCR, text-video, and text-hybrid matching scores, denoted as OCR, Video, and Hybrid, respectively. Our TCD captures fine-grained scene text, such as "GRILL" and "Thank you" with high similarity and hybrid scores. Please zoom in for a better view of the details.
 </p>
 
 ## [6/7] Text→Video Retrieval Results (2/2)
 ![Text→Video Retrieval (2/2)](images/t2v_1.png)
 <p align="justify">
-<b>Figure 5:</b> Visualization of retrieval results comparing our method (left) with the model without OCR information (right). Sim represents the overall similarity
+<b>Figure 6:</b> Visualization of retrieval results comparing our method (left) with the model without OCR information (right). Sim represents the overall similarity
 score, calculated as the average of text-OCR, text-video, and text-hybrid matching scores, denoted as OCR, Video, and Hybrid, respectively. Our TCD captures fine-grained scene text, such as "SAC MIA", "School", and "SDY 288H" with high similarity and hybrid scores. Please zoom in for a better view of the details.
 </p>
 
@@ -85,7 +88,7 @@ score, calculated as the average of text-OCR, text-video, and text-hybrid matchi
 
 ## [7/7] Abstract
 <div style="text-align: justify;">
-Existing text-video retrieval (TVR) methods mainly focus on aligning single-modal video content with text queries, overlooking heterogeneous scene text in videos. While scene text offers fine-grained semantics for cross-modal matching, its effective utilization faces two critical challenges: (1) The temporal density of scene text imposes substantial computational burdens, and (2) Redundant scene text and irrelevant video frames hinder the learning of clear temporal clues for retrieval. In this paper, we propose a temporal scene-text calibrating and distilling (TCD) network to encode scene text efficiently while capturing clear temporal clues. Concretely, we first design a window-OCR captioner that aggregates abundant scene text in videos into condensed sentences to reduce computational complexity. Then, we leverage the heterogeneous scene text as a self-supervised signal to calibrate the synchronization between window-level OCR captions and frames-level video sequences. Furthermore, we devise a context-guided temporal clue distillation to capture the complementarity and relevance among scene text and video frames, generating clear temporal clues for retrieval. Extensive experiments show TCD achieves SOTA results on two scene text TVR datasets and one traditional TVR dataset.
+Existing text-video retrieval (TVR) methods mainly focus on aligning single-modal video content with text queries, overlooking heterogeneous scene text in videos. While scene text offers fine-grained semantics for cross-modal matching, its effective utilization faces two critical challenges: (1) The temporal density of scene text imposes substantial computational burdens; (2) Redundant scene text and irrelevant video frames hinder the learning of clear temporal clues for retrieval. In this paper, we propose a temporal scene-text calibrating and distilling (TCD) network to encode scene text efficiently while capturing clear temporal clues. Concretely, we first design a window-OCR captioner that aggregates abundant scene text in videos into condensed sentences to reduce computational complexity. Then, we leverage the heterogeneous scene text as a self-supervised signal to calibrate the synchronization between window-level OCR captions and frames-level video sequences. Furthermore, we devise a context-guided temporal clue distillation to capture the complementarity and relevance among scene text and video frames, generating clear temporal clues for retrieval. Extensive experiments show that TCD achieves SOTA results on two scene text TVR datasets and one traditional TVR dataset.
 </div>
 
 **The source code and trained models will be released soon.**
