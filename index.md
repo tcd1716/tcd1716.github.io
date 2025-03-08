@@ -19,7 +19,7 @@ achieving better performance with lower complexity (c).
 </p>
 
 ## [2/7] Model Architecture
-![TCD Model Architecture](images/T-CARD.png)
+![TCD Model Architecture](images/TCD.png)
 
 <p align="justify">
 <b>Figure 2:</b> Pipeline of the proposed <b>TCD</b>. Window-OCR captioner is leveraged to aggregate abundant scene text into condensed OCR captions. Heterogeneous semantics calibrating uses scene text in both video frames and OCR captions as a signal for self-supervised learning. Context-guided temporal clue distilling assigns each modal query with a learnable clue to obtain a clear context temporal clue.
